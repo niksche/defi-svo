@@ -39,5 +39,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "web3": "^1.5.2",
+    "web3-utils": "^1.5.2"
   }
 }
