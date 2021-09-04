@@ -1,0 +1,15 @@
+.App {
+    margin: 10px;
+    width: 200px;
+    height: 40px;
+    background-color: skyblue;
+    border-radius: 50px;
+    border: solid 2px white;
+    text-align: center;
+    line-height: 20px;
+    color: white;
+}
+
+.App:hover {
+    box-shadow: burlywood 0 0 13px 10px;
+}

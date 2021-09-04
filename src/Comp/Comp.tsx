@@ -7,7 +7,7 @@ const Comp = async () => {
     const mySmartContract = await SmartContract();
     const accounts = await Account();
     if (accounts) {
-        await mySmartContract.methods.increment().send({from: accounts[0]}).on('receipt', () => {
+        await mySmartContract.methods.payAndExtend(500).send({from: accounts[0]}).on('receipt', () => {
             console.log("I printed it");
         });
     }
