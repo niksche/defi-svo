@@ -13,6 +13,7 @@ import { Header } from 'antd/lib/layout/layout';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
 import AnalyticsPage from './AnalyticsPage';
+import AnalyticsPageCompany from './AnalyticsPageCompany';
 
 export default function App() {
   return (
@@ -32,6 +33,9 @@ export default function App() {
       <div>
     
         <Switch>
+        <Route path="/analytics/company">
+            <AnalyticsPageCompany />
+          </Route>
           <Route path="/analytics">
             <AnalyticsPage />
           </Route>
