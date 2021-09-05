@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Web service created on the basis of etherium smart contracts protocol
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+this project purpuse is to automate B2b interaction in the field of office space rent 
 
 ## Available Scripts
 
