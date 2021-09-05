@@ -1,0 +1,10 @@
+.flexStyle {
+    height: 500px;
+    width: 1200px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: auto;
+    /* grid-template-areas:  */
+    overflow: scroll;
+}

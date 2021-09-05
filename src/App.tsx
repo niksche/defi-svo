@@ -1,21 +1,62 @@
-import React from 'react';
-import Web3 from 'web3';
-import { AbiItem } from 'web3-utils';
+import React, { FC } from 'react';
+import { Button, Menu } from 'antd';
+import './App.css';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-import './styles.css';
+import CustomerPage from './CustomerPage';
+import { Header } from 'antd/lib/layout/layout';
+import HomePage from './HomePage';
+import AboutPage from './AboutPage';
 
-import Comp from './Comp';
-
-import contractAddress from './SmartContract/.config/SmartContractAddress';
-import contractABI from './SmartContract/.config/SmartContractABI.json';
-
-
-function App() {
+export default function App() {
   return (
-    <div className="">
-      <button className = "App" onClick= {Comp}>Keep calm and pay to svo</button>
-    </div>
+    <Router>
+
+<Header style={{ position: 'fixed', zIndex: 1, width: '100%' }}>
+      <div className="logo" />
+      <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
+        <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
+        <Menu.Item key="3"><Link to="/about">About</Link></Menu.Item>
+      </Menu>
+    </Header>
+
+
+      <div>
+    
+        <Switch>
+          <Route path="/about">
+            <AboutPage />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/customer">
+            <CustomerPage />
+          </Route>
+          <Route path="/">
+            <HomePage />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 
-export default App;
+const Home : FC = () => (
+  <div className="App">
+    <Button type="primary">Button</Button>
+  </div>
+);
+
+const About= () => {
+  return <h2>About</h2>;
+}
+
+const Users = () => {
+  return <h2>Users</h2>;
+}
