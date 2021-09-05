@@ -12,6 +12,7 @@ import CustomerPage from './CustomerPage';
 import { Header } from 'antd/lib/layout/layout';
 import HomePage from './HomePage';
 import AboutPage from './AboutPage';
+import AnalyticsPage from './AnalyticsPage';
 
 export default function App() {
   return (
@@ -22,6 +23,8 @@ export default function App() {
       <Menu theme="dark" mode="horizontal" defaultSelectedKeys={['2']}>
         <Menu.Item key="1"><Link to="/">Home</Link></Menu.Item>
         <Menu.Item key="3"><Link to="/about">About</Link></Menu.Item>
+        <Menu.Item key="4"><Link to="/analytics">Analytics</Link></Menu.Item>
+
       </Menu>
     </Header>
 
@@ -29,6 +32,9 @@ export default function App() {
       <div>
     
         <Switch>
+          <Route path="/analytics">
+            <AnalyticsPage />
+          </Route>
           <Route path="/about">
             <AboutPage />
           </Route>

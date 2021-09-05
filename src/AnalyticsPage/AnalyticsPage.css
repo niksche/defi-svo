@@ -1,0 +1,12 @@
+.site-statistic-demo-card {
+    width: 380px;
+    padding: 20px;
+    background: #ececec;
+  }
+
+
+
+  .stat {
+      /* margin: 2px; */
+      width: 150px;
+  }
